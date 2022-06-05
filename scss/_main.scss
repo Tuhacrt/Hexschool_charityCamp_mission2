@@ -1,0 +1,261 @@
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+a {
+  color: #3f5d45;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 940px;
+}
+
+.mr {
+  &-1 {
+    margin-right: 20px;
+  }
+  &-3 {
+    margin-right: 60px;
+  }
+}
+
+.ml {
+  &-1 {
+    margin-left: 20px;
+  }
+  &-3 {
+    margin-left: 60px;
+  }
+}
+.mt {
+  margin-top: 60px;
+}
+
+.jc {
+  &-sa {
+    justify-content: space-around;
+  }
+  &-sb {
+    justify-content: space-between;
+  }
+  &-c {
+    justify-content: center;
+  }
+}
+.fxd {
+  &-col {
+    flex-direction: column;
+  }
+}
+
+.color {
+  &-primary {
+    color: $color-primary;
+  }
+  &-secondary {
+    color: $color-secondary;
+  }
+  &-white {
+    color: #fff;
+  }
+}
+
+.bgcolor {
+  &-primary {
+    background-color: $color-primary;
+  }
+  &-secondary {
+    background-color: $color-secondary;
+  }
+  &-white {
+    background-color: #fff;
+  }
+}
+
+.font {
+  &-l {
+    font-size: 24px;
+  }
+  &-m {
+    font-size: 20px;
+  }
+  &-s {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &-bold {
+    font-weight: bold;
+  }
+  &-bolder {
+    font-weight: bolder;
+  }
+}
+
+.border {
+  border: 1px solid #eaf0ed;
+}
+
+.posi {
+  &-relative {
+    position: relative;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.logo {
+  height: 40px;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.banner {
+  display: flex;
+  margin-top: 30px;
+}
+.aside {
+  display: flex;
+  width: 300px;
+  text-align: center;
+  flex-direction: column;
+  margin-right: 20px;
+  h2 {
+    width: 300px;
+    padding: 30.5px;
+  }
+  li {
+    border: 1px solid $color-secondary;
+  }
+  li a {
+    display: block;
+    padding: 31.5px;
+  }
+  li a:hover {
+    background: $color-secondary;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.productList {
+  display: flex;
+  width: 620px;
+  align-items: left;
+  text-align: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.productListCard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  li a {
+    display: block;
+    height: 315px;
+  }
+}
+
+.tag {
+  width: 300px;
+  position: relative;
+  text-align: center;
+  font-size: 0;
+  .label {
+    position: absolute;
+    writing-mode: vertical-lr;
+    top: 0px;
+    left: 20px;
+    height: 100px;
+    font-size: 16px;
+    padding: 0 20px;
+    background: $color-primary;
+    color: $color-secondary;
+    font-weight: 600;
+  }
+  .like {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+  }
+}
+
+.productListCardBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    width: 173px;
+    padding: 27px;
+    font-size: 20px;
+    color: $color-primary;
+    border: 1px solid $color-secondary;
+  }
+  span {
+    width: 127px;
+    padding: 27px;
+    font-size: 20px;
+    color: $color-primary;
+    font-weight: bolder;
+    border: 1px solid $color-secondary;
+  }
+  a {
+    height: calc(100%-20px);
+    width: 300px;
+    padding: 31.5px;
+    font-size: 24px;
+    color: $color-primary;
+    background: $color-secondary;
+    font-weight: bolder;
+    border: 1px solid $color-secondary;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  width: 620px;
+  margin-bottom: 100px;
+  &-body {
+    display: flex;
+    li {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        border: 1px solid $color-secondary;
+        font-size: 20px;
+        padding: 16px 26px;
+      }
+      a:hover{
+        background-color: $color-primary;
+        color: $color-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+$color-primary: #221e1f;
+$color-secondary: #56c4c5;
+$color-tertiary: #ff5d50;
+$color-grey: #747474;
+$font-l: 20px;
+$font-m: 18px;
+$font-s: 16px;
+$line-height-l: 1.5;
+$line-height-m: 1.2;
+$font-family-base: "Helvetica,Arial,sans-serif";
+$font-family-title: "monospace";
+$spacer: 8px;
+$spacers: (
+  0: 0px,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 9,
+  10: $spacer * 10,
+  11: $spacer * 11,
+  12: $spacer * 12,
+);
