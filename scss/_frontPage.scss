@@ -1,6 +1,6 @@
-* {
+/** {
   outline: 1px solid red;
-}
+}*/
 
 .btn {
   display: inline-block;
@@ -172,13 +172,23 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 768px;
-  @include mobile {
+  @include mobile-s {
     max-width: 375px;
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg);
+    background-repeat: no-repeat;
+    background-position: top 468px center;
+    background-size: 305px;
   }
 }
 .container {
-  max-width: 1085px;
+  max-width: 1088px;
   margin: 0 auto;
+  @include mobile-s {
+    max-width: 335px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .navbar {
@@ -192,6 +202,15 @@ body {
       height: 40px;
     }
   }
+  @include mobile-s {
+    border-bottom: 1px solid #ffd153;
+    margin-bottom: 32px;
+    .logo {
+      img {
+        height: 24px;
+      }
+    }
+  }
 }
 
 .content {
@@ -199,9 +218,22 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 534px;
-  margin-bottom: 217px;
+  margin-bottom: 217.5px;
   img {
     height: 534px;
+  }
+  @include mobile-s {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 596px;
+    margin-bottom: 98.5px;
+    img {
+      display: flex;
+      height: 300px;
+      margin: 0;
+    }
   }
 }
 
@@ -214,6 +246,29 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: flex-start;
+  @include mobile-s {
+    height: 188px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: start;
+    text-align-last: left;
+    padding: 0;
+    margin-bottom: 16px;
+    h1 {
+      font-size: 32px;
+      line-height: 1.3;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 16px;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .platform {
@@ -236,12 +291,41 @@ body {
       height: 90px;
     }
   }
+  @include mobile-s {
+    margin-bottom: 60px;
+    h2 {
+      margin-bottom: 32px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 24px;
+      img {
+        height: 60px;
+      }
+      h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .situation {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
+
   &-list {
     display: flex;
     flex-direction: row;
@@ -257,6 +341,25 @@ body {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
     img {
       height: 260px;
+      border-radius: 12px 12px 0 0;
+    }
+  }
+  @include mobile-s {
+    margin-bottom: 60px;
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-card {
+      margin-bottom: 24px;
     }
   }
 }
@@ -267,6 +370,7 @@ body {
   margin-bottom: 100px;
   height: 588px;
   justify-content: space-between;
+  margin-bottom: 60px;
   &-text {
     margin-top: 165px;
   }
@@ -299,6 +403,36 @@ body {
     box-shadow: 0px 2px 10px #00000014;
     img {
       height: 52px;
+    }
+  }
+
+  @include mobile-s {
+    flex-direction: column;
+    height: auto;
+    &-text {
+      margin-top: 0;
+      text-align: center;
+      margin-bottom: 32px;
+      h2 {
+        font-size: 28px;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+    &-list {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: 230px;
+    }
+    &-card {
+      flex-direction: column;
+      width: 230px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -343,6 +477,20 @@ body {
   &-star {
     display: block;
   }
+  @include mobile-s {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-card {
+      display: block;
+      height: 248px;
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
 }
 
 .footer {
@@ -350,14 +498,27 @@ body {
   flex-direction: column;
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg);
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 503px;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
   padding: 100px;
+  @include mobile-s {
+    padding: 60px 0;
+    h2 {
+      font-size: 24px;
+    }
+  }
 }
 
 .copyright {
   padding: 16px;
+}
+
+.none-sm {
+  @include mobile-s {
+    display: none;
+  }
 }
